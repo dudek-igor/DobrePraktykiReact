@@ -9,5 +9,15 @@ Dobre Praktyki w React
 3. const FunctionComponents = ({item, log: { _id, priority, text, user, created }}) => {...........});
 ```
 
+### Unikać lokalnego stanu, stosowac Redux-a bądź useContext, tak by stan aplikacji zlokalizowany był w jednym miejscu.
+  > lokalny stan (useState) stosować do komponentów UI.
+
+### Poprawny zgodny z konwencjami zapis:
+```bash
+1. HOC - withCompoenent
+2. Custom Hook - useMyHook
+3. nazwa komponentu z dużej litery
+```
+  
 
 
