@@ -18,6 +18,14 @@ Dobre Praktyki w React
 2. Custom Hook - useMyHook
 3. nazwa komponentu z dużej litery
 ```
-  
+
+
+### "Łapiąc" elementy w testach używamy `data-testid="sample`, a nie "łapiemy" po klasie :
+```bash
+test("render input element", () => {
+    render(<Input />);
+    expect(screen.getByTestId("sample-input")).toBeInTheDocument();
+   });
+ ```
 
 
