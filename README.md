@@ -14,14 +14,23 @@ Dobre Praktyki w React
 ### 2. Single Source of Truth - Unikać lokalnego stanu, stosowac Redux-a/MobX-a, bądź useContext, tak by stan aplikacji zlokalizowany był w jednym miejscu.
   > lokalny stan (useState) stosować do komponentów UI.
 
-### 3. Poprawny zgodny z konwencjami zapis:
+### 3. Togglowanie stanu w kompnentach UI zamiast pisania dwóch funkcji.
+```bash
+-> MyComponent
+.....
+const [isOpen. setIsOpen] = useState(false);
+.....
+<button onClick={()=>setIsOpen(!isOpen)}>{isOpen ? `Close` : `Open`}</button>
+```
+
+### 4. Poprawny zgodny z konwencjami zapis:
 ```bash
 1. HOC - withCompoenent
 2. Custom Hook - useMyHook
 3. nazwa komponentu z dużej litery
 ```
 
-### 4. "Łapiąc" elementy w testach używamy `data-testid="sample`, a nie "łapiemy" po klasie :
+### 5. "Łapiąc" elementy w testach używamy `data-testid="sample`, a nie "łapiemy" po klasie :
 ```bash
 test("render input element", () => {
     render(<Input />);
@@ -29,7 +38,7 @@ test("render input element", () => {
    });
  ```
  
- ### 5. Stworzyć plik jsconfig.json w głownym folderze projektu, a w nim dodać opcję bezwględnych ścieżek przy kompilacji. 
+ ### 6. Stworzyć plik jsconfig.json w głownym folderze projektu, a w nim dodać opcję bezwględnych ścieżek przy kompilacji. 
  ```bash
 {
   "compilerOptions": {
@@ -45,14 +54,14 @@ test("render input element", () => {
 NODE_PATH = src
  ```
  
- ### 6. Funkcje wspierające(helpers lub utilits) wyeksportować do `utilits/index.js`
+ ### 7. Funkcje wspierające(helpers lub utilits) wyeksportować do `utilits/index.js`
  
- ### 7. Single Responsibility Principle 
+ ### 8. Single Responsibility Principle 
  > Zasada Pojedyńćzego zadania.\
  > Komponent powinnien wykonywać jak najbardziej zminimalizowaną liczbę zadań. \
  > Przejrzystość i czytelność kodu.
  
- ### 8. Obsługa błedów 
+ ### 9. Obsługa błedów 
  > Stworzyć w utilits `setError(true, error)` którego odpiwiednio obsłużymy,
   ```bash
 try{
@@ -68,15 +77,15 @@ try{
 </ErrorBoundary>
  ```
  
- ### 9. Memonizacja - useMemo(), useCallback() lub użyć HOC jakim jest React.memo().
+ ### 10. Memonizacja - useMemo(), useCallback() lub użyć HOC jakim jest React.memo().
  > Memonizacja jest to zabieg, który ma na celu poprawić wydajność naszego kodu poprzez zapamiętywanie budowy / wartości komponentu.\
  > Jeżeli propsy bądź waartosći przekazane się nie zmienią kompnent nie będzie ponowanie renderowany.
  
- ### 10. Walidować propsy i nadaniawe domyślnych wartości
+ ### 11. Walidować propsy i nadaniawe domyślnych wartości
  > Poprzez PropTypes \
  > Poprzez TypeScript :heartpulse:
  
- ### 11. Nie pracować na wartościach typu string. 
+ ### 12. Nie pracować na wartościach typu string. 
  > Łatwo popełnić literówki. \
  > Jeżli potrzebujemy wartości do porównywania tworzymy plik constans.js, który przetrzymuje nam zmienne.\
  > Konwecja mówi, by pisać tego typu zmienne wielkimi literami.\
