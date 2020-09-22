@@ -1,6 +1,6 @@
 # Dobre Praktyki w React
 Dobre Praktyki w React
-> Staram na bierząco uzupełniać wiadomości
+> Staram na bierząco uzupełniać wiadomości.\
 > Jeżeli znasz inne dobre praktyki, które znacząco podnoszą poziom kodu i ułatwiają prace, [skonatkuj się z mną.] \
 > Z chęcią się dowiem.
 
