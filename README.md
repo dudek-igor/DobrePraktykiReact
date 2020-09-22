@@ -12,15 +12,20 @@ Dobre Praktyki w React
 ```
 
 ### 2. Single Source of Truth - Unikać lokalnego stanu, stosowac Redux-a/MobX-a, bądź useContext, tak by stan aplikacji zlokalizowany był w jednym miejscu.
-  > lokalny stan (useState) stosować do komponentów UI.
+  > lokalny stan (useState) stosować do komponentów UI.\
+  > Jeżeli nasz komponet UI jest zależny od kilku stanów hook-a useState należy zastąpić useReducer().
 
 ### 3. Togglowanie stanu w kompnentach UI zamiast pisania dwóch funkcji.
+> Hook useState działa asynchorniczne, więc by zabezpieczyć się przed ewentulanymi błedami przy togglowaniu powinno się przekazać poprzedni stan.
 ```bash
 -> MyComponent
 .....
 const [isOpen. setIsOpen] = useState(false);
 .....
-<button onClick={()=>setIsOpen(!isOpen)}>{isOpen ? `Close` : `Open`}</button>
+const handleClick = () => setIsOpen(isOpen => !isOpen);
+.....
+<button onClick={handleClick}>{isOpen ? `Close` : `Open`}</button>
+.....
 ```
 
 ### 4. Poprawny zgodny z konwencjami zapis:
@@ -94,7 +99,15 @@ try{
  -> `constans.js`
 export const SAMPLE = 'SAMPLE'
 ```
- 
+
+### 13. Pamiętać przy mapowaniu tablicy by nadawać key={} elementom.
+> Key ma być uniklany tylko względem mapowanej tablicy a nie całej aplikacji.\
+> React wykorzystuje schemant .....
+```bash
+arrayOfItems.map(item => <li key={item.id}>{item.content}</li>)
+```
+
+
  
  
 
