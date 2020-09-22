@@ -2,7 +2,7 @@
 Dobre Praktyki w React
 > Staram na bierząco uzupełniać wiadomości.\
 > Jeżeli znasz inne dobre praktyki, które znacząco podnoszą poziom kodu i ułatwiają prace, [skonatkuj się z mną.] \
-> Z chęcią się dowiem.
+> Z chęcią poszerze swoje choryzonty z React!
 
 ### 1. Stosować destrykturyzację wszędzie gdzie to tylko możliwe
 ```bash
@@ -76,7 +76,16 @@ try{
  > Poprzez PropTypes \
  > Poprzez TypeScript :heartpulse:
  
- ### 11. 
+ ### 11. Nie pracować na wartościach typu string. 
+ > Łatwo popełnić literówki. \
+ > Jeżli potrzebujemy wartości do porównywania tworzymy plik constans.js, który przetrzymuje nam zmienne.\
+ > Konwecja mówi, by pisać tego typu zmienne wielkimi literami.\
+ > Jest to sygnał dla osoby czytającej nasz kod, że jest to zmienna stworzona do porównywania.
+```bash
+ -> `constans.js`
+export const SAMPLE = 'SAMPLE'
+```
+ 
  
  
 
