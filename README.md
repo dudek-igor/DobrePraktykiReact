@@ -1,6 +1,8 @@
 # Dobre Praktyki w React
 Dobre Praktyki w React
 > Staram na bierząco uzupełniać wiadomości
+> Jeżeli znasz inne dobre praktyki, które znacząco podnoszą poziom kodu i ułatwiają prace, [skonatkuj się z mną.] \
+> Z chęcią się dowiem.
 
 ### 1. Stosować destrykturyzację wszędzie gdzie to tylko możliwe
 ```bash
@@ -48,7 +50,7 @@ NODE_PATH = src
  ### 7. Single Responsibility Principle 
  > Zasada Pojedyńćzego zadania.\
  > Komponent powinnien wykonywać jak najbardziej zminimalizowaną liczbę zadań. \
- > Przejrzystość i czytelność kodu.\
+ > Przejrzystość i czytelność kodu.
  
  ### 8. Obsługa błedów 
  > Stworzyć w utilits `setError(true, error)` którego odpiwiednio obsłużymy,
@@ -78,5 +80,5 @@ try{
  
  
 
-
+[skonatkuj się z mną.]: https://www.linkedin.com/in/igor-dudek-96a87611a/
 [Error Boundarie]: https://medium.com/swlh/understanding-reacts-error-boundaries-c15db8229d97
