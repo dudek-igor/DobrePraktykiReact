@@ -2,7 +2,7 @@
 Dobre Praktyki w React
 > Staram na bierząco uzupełniać wiadomości.\
 > Jeżeli znasz inne dobre praktyki, które znacząco podnoszą poziom kodu i ułatwiają prace, [skonatkuj się z mną.] \
-> Z chęcią poszerze swoje choryzonty z React!
+> Z chęcią poszerzę swoje horyzonty z React!
 
 ### 1. Stosować destrykturyzację wszędzie gdzie to tylko możliwe
 ```bash
@@ -100,12 +100,14 @@ try{
 export const SAMPLE = 'SAMPLE'
 ```
 
-### 13. Pamiętać przy mapowaniu tablicy by nadawać key={} elementom.
+### 13. Pamiętać, by przy mapowaniu tablicy nadawać key={} elementom.
 > Key ma być uniklany tylko względem mapowanej tablicy a nie całej aplikacji.\
 > React wykorzystuje schemant .....
 ```bash
 arrayOfItems.map(item => <li key={item.id}>{item.content}</li>)
 ```
+
+### 14. 
 
 
  
