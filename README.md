@@ -9,7 +9,7 @@ Dobre Praktyki w React
 3. const FunctionComponents = ({item, log: { _id, priority, text, user, created }}) => {...........});
 ```
 
-### 2. Unikać lokalnego stanu, stosowac Redux-a bądź useContext, tak by stan aplikacji zlokalizowany był w jednym miejscu.
+### 2. Single Source of Truth - Unikać lokalnego stanu, stosowac Redux-a/MobX-a, bądź useContext, tak by stan aplikacji zlokalizowany był w jednym miejscu.
   > lokalny stan (useState) stosować do komponentów UI.
 
 ### 3. Poprawny zgodny z konwencjami zapis:
@@ -43,6 +43,29 @@ test("render input element", () => {
 NODE_PATH = src
  ```
  
- ### 6. Funkcje wspierające(helpers lub utils) wyeksportować do `utils/index.js`
+ ### 6. Funkcje wspierające(helpers lub utils) wyeksportować do `utilits/index.js`
+ 
+ ### 7. Single Responsibility Principle 
+ > Zasada Pojedyńćzego zadania. Komponent powinnien wykonywać jak najbardziej zminimalizowaną liczbę zadań. 
+  Przejrzystość i czytelność kodu.
+ 
+ ### 8. Obsługa błedów 
+ > stworzyć w utilits `setError(true, error)` którego odpiwiednio obsłużymy,
+  ```bash
+try{
+  // fetch
+}catch(error){
+  setError(true, error)
+}
+ ```
+ > React wychodzi z rozwiązaniem - [Error Boundarie]
+ ```bash
+<ErrorBoundary>
+  <MyCommponent />
+</ErrorBoundary>
+ ```
+ 
+ 
 
 
+[Error Boundarie]: https://medium.com/swlh/understanding-reacts-error-boundaries-c15db8229d97
