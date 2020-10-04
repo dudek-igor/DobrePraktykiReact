@@ -70,12 +70,26 @@ test("render input element", () => {
   ]
 }
  ```
- > można rówież w pliku .env stworzyć poniższą regułę, ale VSC wtedy nie podpowiada
+ > Można rówież w pliku .env stworzyć poniższą regułę, ale VSC wtedy nie podpowiada.
 ```bash
 NODE_PATH = src
  ```
+ > Niestety w Gatsbym dodatkowo trzeba stworzyć "aliasy do ścieżek" w pliku `gatsby-node.js` by kompilator je widział
+ ```bash
+ exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        components: path.resolve(__dirname, 'src/components'),
+        assets: path.resolve(__dirname, 'src/assets'),
+        data: path.resolve(__dirname, 'src/data'),
+      },
+    },
+  })
+}
+ ```
  
- ### 9. Funkcje wspierające(helpers lub utilits) wyeksportować do `utilits/index.js`
+ ### 9. Funkcje wspierające(helpers lub utils) wyeksportować do `utils/index.js`
  
  ### 10. Single Responsibility Principle 
  > Zasada Pojedyńćzego zadania.\
@@ -116,7 +130,10 @@ try{
 export const SAMPLE = 'SAMPLE'
 ```
 
-### 15. 
+### 15. useEffect i useLayoutEffect 
+> useEffect działa asynchronicznie, więc używamy go w 99% przypadkach. \
+> useLayoutEffect działa synchronicznie wraz rendrem komponentu. Używamy jeżeli potrzebujemy manipulować elementami DOM i dokonywać pomiarów. \
+> Pamiętać by odmontowywać eventy `clearInterval`, `removeEventListener` by utrzymać performance na wysokim poziomie.
 
 
  
