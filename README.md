@@ -142,4 +142,4 @@ export const SAMPLE = 'SAMPLE'
 
 [skonatkuj się z mną.]: https://www.linkedin.com/in/igor-dudek-96a87611a/
 [Error Boundarie]: https://medium.com/swlh/understanding-reacts-error-boundaries-c15db8229d97
-[@n8tb1t/use-scroll-position"]: https://www.npmjs.com/package/@n8tb1t/use-scroll-position
+[@n8tb1t/use-scroll-position]: https://www.npmjs.com/package/@n8tb1t/use-scroll-position
