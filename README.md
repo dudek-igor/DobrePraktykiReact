@@ -133,6 +133,7 @@ export const SAMPLE = 'SAMPLE'
 ### 15. useEffect i useLayoutEffect 
 > useEffect działa asynchronicznie, więc używamy go w 99% przypadkach. \
 > useLayoutEffect działa synchronicznie wraz rendrem komponentu. Używamy jeżeli potrzebujemy manipulować elementami DOM i dokonywać pomiarów. \
+> [@n8tb1t/use-scroll-position] - super hook do dokonywania pomiarów, wykorzystuje useLayoutEffect
 > Pamiętać by odmontowywać eventy `clearInterval`, `removeEventListener` by utrzymać performance na wysokim poziomie.
 
 
@@ -141,3 +142,4 @@ export const SAMPLE = 'SAMPLE'
 
 [skonatkuj się z mną.]: https://www.linkedin.com/in/igor-dudek-96a87611a/
 [Error Boundarie]: https://medium.com/swlh/understanding-reacts-error-boundaries-c15db8229d97
+[@n8tb1t/use-scroll-position"]: https://www.npmjs.com/package/@n8tb1t/use-scroll-position
