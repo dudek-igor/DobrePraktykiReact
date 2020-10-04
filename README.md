@@ -133,7 +133,7 @@ export const SAMPLE = 'SAMPLE'
 ### 15. useEffect i useLayoutEffect 
 > useEffect działa asynchronicznie, więc używamy go w 99% przypadkach. \
 > useLayoutEffect działa synchronicznie wraz rendrem komponentu. Używamy jeżeli potrzebujemy manipulować elementami DOM i dokonywać pomiarów. \
-> [@n8tb1t/use-scroll-position] - super hook do dokonywania pomiarów, wykorzystuje useLayoutEffect
+> [@n8tb1t/use-scroll-position] - super hook do dokonywania pomiarów, wykorzystuje useLayoutEffect. \
 > Pamiętać by odmontowywać eventy `clearInterval`, `removeEventListener` by utrzymać performance na wysokim poziomie.
 
 
