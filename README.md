@@ -163,7 +163,17 @@ export const SAMPLE = 'SAMPLE'
 > [@n8tb1t/use-scroll-position] - super hook do dokonywania pomiarów, wykorzystuje useLayoutEffect. \
 > Pamiętać by odmontowywać eventy `clearInterval`, `removeEventListener` by utrzymać performance na wysokim poziomie.
 
-## 16.
+## 16. Obsługa SSR 
+> Gdy piszemy skrypt (np. Hook), który może być reużywalny w wielu projektach to należy go zabezpiczyć by obsługiwał SSR(Next.js)
+```bash
+const isBrowser = typeof window !== `undefined`
+const useCustomHook = () => {
+  if (!isBrowser) return something
+......
+......
+}
+
+```
 
 [skonatkuj się z mną.]: https://www.linkedin.com/in/igor-dudek-96a87611a/
 [error boundarie]: https://medium.com/swlh/understanding-reacts-error-boundaries-c15db8229d97
