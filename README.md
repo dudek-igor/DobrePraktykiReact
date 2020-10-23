@@ -3,7 +3,9 @@
 Dobre Praktyki w React
 
 > Staram na bierząco uzupełniać wiadomości.\
-> Jeżeli znasz inne dobre praktyki, które znacząco podnoszą poziom kodu i ułatwiają prace, [skonatkuj się z mną.] \
+> Jeżeli znasz inne dobre praktyki,\
+> które znacząco podnoszą poziom kodu i ułatwiają prace, \
+> [skonatkuj się z mną], lub [stwórz pull request].\
 > Z chęcią poszerzę swoje horyzonty z React!
 
 ### 1. Stosować destrykturyzację wszędzie gdzie to tylko możliwe
@@ -33,7 +35,8 @@ Dobre Praktyki w React
 ### 4. Pamiętać, by przy mapowaniu tablicy nadawać key={} elementom.
 
 > Key ma być uniklany tylko względem mapowanej tablicy a nie całej aplikacji.\
-> React wykorzystuje schemant .....
+> React wykorzystuje zjawisko pojednania (ang. reconciliation). \
+> Reconcilation jest możliwe dzięki algorytmowi który został użyty w React. [React’s “diffing” algorithm]
 
 ```bash
 arrayOfItems.map(item => <li key={item.id}>{item.content}</li>)
@@ -175,6 +178,8 @@ const useCustomHook = () => {
 
 ```
 
-[skonatkuj się z mną.]: https://www.linkedin.com/in/igor-dudek-96a87611a/
+[skonatkuj się z mną]: https://www.linkedin.com/in/igor-dudek-96a87611a/
+[stwórz pull request]: https://github.com/dudek-igor/Dobre_Praktyki_w_React/pulls
 [error boundarie]: https://medium.com/swlh/understanding-reacts-error-boundaries-c15db8229d97
 [@n8tb1t/use-scroll-position]: https://www.npmjs.com/package/@n8tb1t/use-scroll-position
+[React’s “diffing” algorithm]:https://pl.reactjs.org/docs/reconciliation.html
