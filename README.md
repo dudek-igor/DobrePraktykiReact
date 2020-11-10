@@ -166,7 +166,7 @@ export const SAMPLE = 'SAMPLE'
 > [@n8tb1t/use-scroll-position] - super hook do dokonywania pomiarów, wykorzystuje useLayoutEffect. \
 > Pamiętać by odmontowywać eventy `clearInterval`, `removeEventListener` by utrzymać performance na wysokim poziomie.
 
-## 16. Obsługa SSR 
+### 16. Obsługa SSR 
 > Gdy piszemy skrypt (np. Hook), który może być reużywalny w wielu projektach to należy go zabezpiczyć by obsługiwał SSR(Next.js)
 ```bash
 const isBrowser = typeof window !== `undefined`
@@ -177,6 +177,16 @@ const useCustomHook = () => {
 }
 
 ```
+
+### 17. Obsługa CORS w developmencie
+> Odpalając serwer oraz aplikację frontendową lokalnie (localhost) robimy to na różnych portach np. :5000 i :3000. \
+> Podczas zapytań do servera dochodzi więc do probelmu z CORS. \
+> By obsłużyć politykę CORS podczas developmentu, należy dodać do package.json aplikacji frontendowej proxy z informacją na jakim porcie znajduje się nasz serwer. \ 
+> **"proxy": "http://localhost:<port_serwera>"** - np: `"proxy": "http://localhost:5000"`. \
+> Następnie np. poprzez axios wystarczy tworzyć zapaytania podawając tylko odpowiednią ścieżkę. \
+> `const res = await axios.post('api/auth/login', body, config);`
+
+
 
 [skonatkuj się z mną]: https://www.linkedin.com/in/igor-dudek-96a87611a/
 [stwórz pull request]: https://github.com/dudek-igor/Dobre_Praktyki_w_React/pulls
