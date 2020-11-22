@@ -16,10 +16,15 @@ Dobre Praktyki w React
 3. const FunctionComponents = ({item, log: { _id, priority, text, user, created }}) => {...........});
 ```
 
-### 2. Single Source of Truth - Unikać lokalnego stanu, stosowac Redux-a/MobX-a, bądź useContext, tak by stan aplikacji zlokalizowany był w jednym miejscu.
+### 2. Single Source of Truth 
+Unikać lokalnego stanu.  \ 
+Mamy kilka rozwiązan:
+- Redux 
+- MobX 
+- Context API -> createContext, useReducer, useContext, react-query
+- Recoil - od twórców Facebook-a, więc pewnie będzie mocno rozwijana.
 
-> lokalny stan (useState) stosować do komponentów UI.\
-> Jeżeli nasz komponet UI jest zależny od kilku stanów hook-a useState należy zastąpić useReducer().
+> Lokalny stan (useState) stosować do komponentów UI.\
 
 ### 3. DRY - Don't repeat yourself.
 
