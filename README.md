@@ -17,14 +17,14 @@ Dobre Praktyki w React
 ```
 
 ### 2. Single Source of Truth 
-Unikać lokalnego stanu.  \ 
+Unikać lokalnego stanu.\
 Mamy kilka rozwiązan:
 - Redux 
 - MobX 
 - Context API -> createContext, useReducer, useContext, react-query
 - Recoil - od twórców Facebook-a, więc pewnie będzie mocno rozwijana.
 
-> Lokalny stan (useState) stosować do komponentów UI.\
+> Lokalny stan (useState) stosować do komponentów UI.
 
 ### 3. DRY - Don't repeat yourself.
 
