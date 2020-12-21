@@ -49,17 +49,10 @@ arrayOfItems.map(item => <li key={item.id}>{item.content}</li>)
 
 ### 5. Togglowanie stanu w kompnentach UI zamiast pisania dwóch funkcji.
 
-> Hook useState działa asynchorniczne, więc by zabezpieczyć się przed ewentulanymi błedami przy togglowaniu powinno się przekazać poprzedni stan.
+> setState działa asynchorniczne, więc by zabezpieczyć się przed ewentulanymi błedami przy togglowaniu powinno się przekazać poprzedni stan.
 
-```bash
--> MyComponent
-.....
-const [isOpen. setIsOpen] = useState(false);
-.....
-const handleClick = () => setIsOpen(isOpen => !isOpen);
-.....
-<button onClick={handleClick}>{isOpen ? `Close` : `Open`}</button>
-.....
+```js
+this.setState((state) => ({ value: state.value + 1}));
 ```
 
 ### 6. Poprawny zgodny z konwencjami zapis:
