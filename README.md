@@ -184,6 +184,11 @@ const useCustomHook = () => {
 > Następnie np. poprzez axios wystarczy tworzyć zapaytania podawając tylko odpowiednią ścieżkę. \
 > `const res = await axios.post('api/auth/login', body, config);`
 
+### 18. Obsługa CSP w Create React App
+> `By default, Create React App will embed the runtime script into index.html during the production build.`
+> Narusza więc to politykę Content-Security-Policy. \
+> By tego uniknąć w naszym kliencie do pliku .env dodajemy `INLINE_RUNTIME_CHUNK=false` co rozwiązuje proeblem c CSP.
+> Dodatkowo jeżli na sewerze buduje się nasz aplikacja to możemy zrobić - `.... && INLINE_RUNTIME_CHUNK=false npm run build`
 
 
 [skonatkuj się z mną]: https://www.linkedin.com/in/igor-dudek-96a87611a/
